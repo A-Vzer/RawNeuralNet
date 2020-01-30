@@ -1,5 +1,5 @@
 This code is a simple implementation of a neural network from pure scratch in python. Number of hidden layers, nodes and
-images to train per class are customizable. The code prints the loss and finally the train and test accuracy.
+images to train per class are customizable. The code prints the loss during training and finally the train and test accuracy.
 
 Special thanks and credits to:
 
