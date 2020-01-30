@@ -19,6 +19,7 @@ def to_categorical(labels):
 images_per_class = 0
 epochs = 60000
 learning_rate = 0.0001
+log = 100
 
 # Test train split
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
@@ -194,7 +195,7 @@ def implementation(X, Y, architecture, alpha=learning_rate, iterations=epochs, p
         cost = cost_function(AL, Y_sgd)
         gradients = model_layer_back(AL, Y_sgd, parameters, cache, architecture)
         parameters = update(parameters, gradients, alpha)
-        if print_iter and k % 100 == 0:
+        if print_iter and k % log == 0:
             print("Loss after iteration %i: %f" %(k, cost))
 
     return parameters
